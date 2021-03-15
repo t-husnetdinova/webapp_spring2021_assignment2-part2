@@ -22,5 +22,5 @@
 <br>
 **Nu HTML Checker status:**  <br>
 <br>
-**Check it out:** <br>
+**Check it out:** https://t-husnetdinova.github.io/webapp_spring2021_assignment2-part2/ <br>
 <br>
