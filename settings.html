@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> Settings </title>
+        <!-- Links to external images -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" type="image/svg" href="img/wink-svgrepo-com.svg">
+    </head>
+
+    <body>
+        <header>
+            <!-- Link to external css stylesheet -->
+            <link rel="stylesheet" href="styles.css">
+        </header>
+
+        <!-- Top navbar -->
+        <nav class="navbar navbar-light navbar-expand-md justify-content-left"
+            style="background-color: #ffffff;">
+
+            <a class="nav-link" href="#"> </a>
+
+            <a class="navbar-brand" href="index.html">
+                <img src="img/wink-svgrepo-com.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                Let's Take a Selfie!
+            </a>
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Nav bar items -->
+            <ul class="nav navbar-nav ml-auto">
+                <!-- Search bar -->
+                <li class="nav-item">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <!-- Please keep this version of the button just in case -->
+                      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                      <a href="search.html" class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </a>
+                    </form>
+                </li>
+
+                <!-- Log in button -->
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#login">Log In</button>
+                </li>
+
+                <!-- Sign up button -->
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup">Sign Up</button>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <button type="button" class="btn btn-outline-line dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/Blank_face.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="account.html">Account</a>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sign Out</a>
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Log In Modal -->
+        <div class="modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <form class="form-signin">
+                            <img src="img/smile-svgrepo-com.svg" width="100" height="100" class="d-inline-block align-top"
+                                alt="">
+                            <h2 class="h3 mb-3 font-weight-normal"> Welcome Back! </h2>
+
+                            <input type="email" class="form-control" placeholder="Email" required> <br>
+                            <input type="password" class="form-control" placeholder="Password" required> <br>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">Remember Me</label> <br> <br>
+                            <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                            <button class="btn btn-secondary btn-block btn-sm" type="reset">Reset</button> <br>
+                            <!-- Password reset -->
+                            <!-- Will need to replace eventually with ref to reset page or more modal logic -->
+                            <span class="forgot-password">
+                                <a href="index.html" title="Forgot Password" id="link-reset">Forgot Password?</a>
+                            </span> <br>
+                            <!-- No account? Sign up instead bc it's good UX practice -->
+                            <!-- Will need to replace eventually with more modal logic -->
+                            <span class="no-account">
+                                <a href="index.html" title="Sign Up" id="link-signup">No account? Sign up!</a>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <form class="form-signin">
+                            <img src="img/happy-emoji-svgrepo-com.svg" width="100" height="100" class="d-inline-block align-top"
+                                alt="">
+                            <h2 class="h3 mb-3 font-weight-normal"> Welcome! </h2>
+                            <div class="row">
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="First name" required> <br>
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name" required> <br>
+                              </div>
+                              <div class="col">
+                                <input type ="date" class="form-control" required> <br>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Username" required> <br>
+                              </div>
+                              <div class="col">
+                                <input type="email" class="form-control" placeholder="Email" required> <br>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col">
+                                <input type="password" class="form-control" placeholder="Password" required> <br>
+                              </div>
+                              <div class="col">
+                                <input type="password" class="form-control" placeholder="Confirm password" required> <br>
+                              </div>
+                            </div>
+
+                            <!-- NEEDS 3 SECURITY QUESTIONS HERE-->
+                            Security Questions <br>
+                            <div class="row">
+                              <div class="col">
+                                <fieldset class="borderless">
+                                  <input type="text" class="form-control" placeholder="Security Question 1" required>
+                                  <input type="text" class="form-control" placeholder="Answer" required>
+                                </fieldset>
+                              </div>
+                              <div class="col">
+                                <fieldset class="borderless">
+                                  <input type="text" class="form-control" placeholder="Security Question 2" required>
+                                  <input type="text" class="form-control" placeholder="Answer" required>
+                                </fieldset>
+                              </div>
+                              <div class="col">
+                                <fieldset class="borderless">
+                                  <input type="text" class="form-control" placeholder="Security Question 3" required>
+                                  <input type="text" class="form-control" placeholder="Answer" required>
+                                </fieldset>
+                              </div>
+                            </div>
+
+                            <br>
+                            <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+                            <button class="btn btn-secondary btn-block btn-sm" type="reset">Reset</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending -->
+        <br>
+        <div class="homepageHeader mx-auto">
+          Settings
+        </div>
+        <br>
+
+        <div class="card text-center homepage mx-auto border-light">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Privacy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Feed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Notifications</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body text-left">
+            <h5 class="card-title">Account Settings</h5>
+            <p class="card-text"> Login Preferences </p>
+            <hr/>
+            <p class="card-text"> <strong> Email </strong> </p>
+            <p class="card-text"> yourname@url <a href="#" class="badge badge-secondary">Reset</a>  </p>
+            <p class="card-text"> <strong> Password </strong> </p>
+            <p class="card-text"> *************** <a href="#" class="badge badge-secondary">Reset</a> </p>
+            <p class="card-text"> More Settings </p>
+            <hr/> <br> <br>
+            <p class="card-text"> Some More Settings </p>
+            <hr/> <br> <br>
+            <p class="card-text"> Even More Settings </p>
+            <hr/> <br> <br>
+          </div>
+        </div>
+
+        <!-- Bottom navbar? -->
+        <!-- I don't think we need this if we have an infinite scroll homepage like reddit -->
+        <!-- Reddit has a bottom right sidebar with About/Careers/Footer copyright info -->
+
+        <footer class="homepageHeader mx-auto">
+            Let's Take a Selfie! © 2021. All rights reserved
+        </footer>
+        <br>
+
+        <!-- Bootystrap things -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
