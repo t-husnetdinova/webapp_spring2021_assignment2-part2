@@ -2,7 +2,7 @@
 mybutton = document.getElementById("toTopBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -33,7 +33,7 @@ function updateSecurityQuestion1View() {
   var divSecurity1 = document.getElementById("divSecurity1");
 
   // if yes is selected
-  if(security1.value != "1") {
+  if (security1.value != "1") {
     divSecurity1.classList.remove("invisible");
   }
   // no error, make it nice again
@@ -49,7 +49,7 @@ function updateSecurityQuestion2View() {
   var divSecurity2 = document.getElementById("divSecurity2");
 
   // if yes is selected
-  if(security2.value != "0") {
+  if (security2.value != "0") {
     divSecurity2.classList.remove("invisible");
   }
   // no error, make it nice again
@@ -65,7 +65,7 @@ function updateSecurityQuestion3View() {
   var divSecurity3 = document.getElementById("divSecurity3");
 
   // if yes is selected
-  if(security3.value != "0") {
+  if (security3.value != "0") {
     divSecurity3.classList.remove("invisible");
   }
   // no error, make it nice again
@@ -107,17 +107,32 @@ function validateForm() {
   // Special Character Check
   var elements = document.getElementsByTagName("input");
 
-  var invalidChars = ['<', '>', '#', '-', '{', '}', '(', ')', '`', '"']; 
+  var invalidChars = ['<', '>', '#', '-', '{', '}', '(', ')', '`', '"'];
   for (let i = 0; i < elements.length; i++) {
-      for (let j = 0; j < invalidChars.length; j++) {
-          if (elements[i].value.indexOf(invalidChars[j]) != -1) {
-              specialCharacterError.classList.remove("invisible");
-              specialCharacterError.innerHTML = "NO SPECIAL CHARACTERS!";
-              elements[i].classList.add("hasError");
-              formIsValid = false;
-          }
+    for (let j = 0; j < invalidChars.length; j++) {
+      if (elements[i].value.indexOf(invalidChars[j]) != -1) {
+        specialCharacterError.classList.remove("invisible");
+        specialCharacterError.innerHTML = "NO SPECIAL CHARACTERS!";
+        elements[i].classList.add("hasError");
+        formIsValid = false;
       }
+    }
   }
 
+  // Password Strength Check (one upper, one lower, one numeric)
+  var passwordSignUp = document.querySelector("#password-sign-up");
+  var divPasswordError = document.querySelector("#divPasswordError");
+  var pass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
+  if (!passwordSignUp.value.match(pass)) {
+    divPasswordError.classList.remove("invisible");
+    divPasswordError.innerHTML = "The password must contain one upper case letter, one lowercase letter, and one number.";
+    passwordSignUp.classList.add("hasError");
+    formIsValid = false;
+  }
+  else {
+    divPasswordErrorclassList.add("invisible");
+    passwordSignUp.classList.remove("hasError");
+  }
 }
+
