@@ -91,7 +91,7 @@
                             <h2 class="h3 mb-3 font-weight-normal"> Welcome Back! </h2>
 
                             <input type="email" class="form-control" placeholder="Email" required> <br>
-                            <input type="password-sign-in" class="form-control" placeholder="Password" required> <br>
+                            <input type="password" class="form-control" placeholder="Password" required> <br>
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                             <label class="form-check-label" for="defaultCheck1">Remember Me</label> <br> <br>
                             <button class="btn btn-primary btn-block" type="submit">Log In</button>
@@ -167,7 +167,7 @@
                             <div class="row">
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <div id="security1" required> 
+                                  <div id="security1"> 
                                     <select class="custom-select" onchange="updateSecurityQuestion1View()">
                                       <option value="0">Security Question 1:</option>
                                       <option value="1">What was your childhood nickname?</option>
@@ -185,7 +185,7 @@
                               </div>
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <div id="security2" required> 
+                                  <div id="security2" > 
                                     <select class="custom-select" onchange="updateSecurityQuestion2View()">
                                       <option value="0">Security Question 2:</option>
                                       <option value="1">What was your childhood nickname?</option>
@@ -197,13 +197,13 @@
                                   </div>
                                   <div id="divSecurity2" class="invisible"> 
                                     <input type="text" class="form-control" placeholder="Answer" required>
-                                    <div class="divSecurityError2" class="invisible errorMessage"></div>
+                                    <div class="divSecurityError2" class="errorMessage invisible "></div>
                                   </div>
                                 </fieldset>
                               </div>
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <div id="security3" required> 
+                                  <div id="security3"> 
                                     <select class="custom-select" onchange="updateSecurityQuestion3View()">
                                       <option value="0">Security Question 3:</option>
                                       <option value="1">What was your childhood nickname?</option>
@@ -215,7 +215,7 @@
                                   </div>
                                   <div id="divSecurity3" class="invisible"> 
                                     <input type="text" class="form-control" placeholder="Answer" required>
-                                    <div class="divSecurityError3" class="invisible errorMessage"></div>
+                                    <div class="divSecurityError3" class="errorMessage invisible"></div>
                                   </div>
                                 </fieldset>
                               </div>
@@ -287,6 +287,7 @@
               <button class="btn btn-primary" id="moreBtn" title="More" @click="$refs.feed.updatePosts()"> Show More </button>
             </div>    
           </div>
+        </div>
 
                          
 
