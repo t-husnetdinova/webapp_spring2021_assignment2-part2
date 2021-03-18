@@ -26,7 +26,7 @@ const app = Vue.createApp({
   },
   methods: {
     posts() {
-      
+
     }
   }
 })
@@ -37,12 +37,12 @@ function updateSecurityQuestion1View() {
   var divSecurity1 = document.getElementById("divSecurity1");
 
   // if yes is selected
-  if (security1.value != "1") {
+  if (security1.value != "0") {
     divSecurity1.classList.remove("invisible");
   }
   // no error, make it nice again
   // if they change their mind
-  else {
+  if (security1.value == "0") {
     divSecurity1.classList.add("invisible");
   }
 }

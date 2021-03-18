@@ -166,9 +166,9 @@
                             Security Questions <br>
                             <div class="row">
                               <div class="col">
-                                <fieldset class="borderless"></fieldset>
-                                  <div class="form-control" id="security1" required> 
-                                    <select onchange="updateSecurityQuestion1View()">
+                                <fieldset class="borderless">
+                                  <div id="security1" required> 
+                                    <select class="custom-select" onchange="updateSecurityQuestion1View()">
                                       <option value="0">Security Question 1:</option>
                                       <option value="1">What was your childhood nickname?</option>
                                       <option value="2">What is your oldest cousin's first and last name?</option>
@@ -177,7 +177,7 @@
                                       <option value="5">In what city or town did your mother and father meet?</option>
                                     </select>
                                   </div>
-                                  <div id="divSecurity1" class="form-control invisible"> 
+                                  <div id="divSecurity1" class="invisible"> 
                                     <input type="text" class="form-control" placeholder="Answer" required>
                                     <div class="divSecurityError1" class="invisible errorMessage"></div>
                                   </div>
@@ -185,8 +185,8 @@
                               </div>
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <div class="form-control" id="security2" required> 
-                                    <select onchange="updateSecurityQuestion2View()">
+                                  <div id="security2" required> 
+                                    <select class="custom-select" onchange="updateSecurityQuestion2View()">
                                       <option value="0">Security Question 2:</option>
                                       <option value="1">What was your childhood nickname?</option>
                                       <option value="2">What is your oldest cousin's first and last name?</option>
@@ -195,7 +195,7 @@
                                       <option value="5">In what city or town did your mother and father meet?</option>
                                     </select>
                                   </div>
-                                  <div id="divSecurity2" class="form-control invisible"> 
+                                  <div id="divSecurity2" class="invisible"> 
                                     <input type="text" class="form-control" placeholder="Answer" required>
                                     <div class="divSecurityError2" class="invisible errorMessage"></div>
                                   </div>
@@ -203,8 +203,8 @@
                               </div>
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <div class="form-control" id="security3" required> 
-                                    <select onchange="updateSecurityQuestion3View()">
+                                  <div id="security3" required> 
+                                    <select class="custom-select" onchange="updateSecurityQuestion3View()">
                                       <option value="0">Security Question 3:</option>
                                       <option value="1">What was your childhood nickname?</option>
                                       <option value="2">What is your oldest cousin's first and last name?</option>
@@ -213,7 +213,7 @@
                                       <option value="5">In what city or town did your mother and father meet?</option>
                                     </select>
                                   </div>
-                                  <div id="divSecurity3" class="form-control invisible"> 
+                                  <div id="divSecurity3" class="invisible"> 
                                     <input type="text" class="form-control" placeholder="Answer" required>
                                     <div class="divSecurityError3" class="invisible errorMessage"></div>
                                   </div>
@@ -282,9 +282,9 @@
               Feed
             </div>
             <feed ref="feed" :key="componentKey"></feed>
-            
+
             <div class="mx-auto text-center">
-              <button class="btn btn-dark" id="moreBtn" title="More" @click="$refs.feed.updatePosts()"> Show More </button>
+              <button class="btn btn-primary" id="moreBtn" title="More" @click="$refs.feed.updatePosts()"> Show More </button>
             </div>    
           </div>
 
