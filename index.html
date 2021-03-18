@@ -4,6 +4,7 @@
     <head>
         <title> Let's Take a Selfie! </title>
 
+        <script src="https://unpkg.com/vue@next"></script>
         <!-- Links to external images -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -231,106 +232,15 @@
           </div>
 
           <!-- Feed -->
-          <div class="homepageHeader mx-auto">
-            Feed
-          </div>
+          
 
-          <!--Feed 1 -->
-          <div class="card mx-auto homepage text-left">
-            <div class="card-body">
-              <h5 class="card-title">Post 1</h5>
-              <p class="card-text"> Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Sed dapibus consectetur tortor, eget ullamcorper
-                augue molestie in. Mauris tempus tristique libero, non dignissim
-                mi tempus ut. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Phasellus in tellus
-                nunc. Nulla commodo aliquam rutrum. Fusce vestibulum dui eget
-                tortor semper hendrerit. Vestibulum molestie vestibulum mi, vitae
-                malesuada nulla tristique id. Phasellus ornare cursus erat at
-                egestas. Nam posuere eros ut felis euismod rutrum. Integer mauris
-                nisi, suscipit ut purus quis, laoreet malesuada orci. Proin at
-                suscipit mi. Etiam nulla arcu, aliquam sit amet ultricies eu,
-                porta nec mauris. Quisque feugiat tortor eu tincidunt tempor.
-                Ut feugiat nunc nec tincidunt ultricies. Vestibulum mattis
-                posuere magna vitae volutpat.</p>
+          <div id="app">
+            <div class="homepageHeader mx-auto">
+              Feed
             </div>
-            <div class="card-footer text-muted text-left">
-              2 days ago
-            </div>
+            <feed :key="componentKey"></feed>
           </div>
-
-          <!--Feed 2 -->
-          <div class="card mx-auto homepage text-left">
-            <div class="card-body">
-              <h5 class="card-title">Post 2</h5>
-              <p class="card-text"> Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Sed dapibus consectetur tortor, eget ullamcorper
-                augue molestie in. Mauris tempus tristique libero, non dignissim
-                mi tempus ut. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Phasellus in tellus
-                nunc. Nulla commodo aliquam rutrum. Fusce vestibulum dui eget
-                tortor semper hendrerit. Vestibulum molestie vestibulum mi, vitae
-                malesuada nulla tristique id. Phasellus ornare cursus erat at
-                egestas. Nam posuere eros ut felis euismod rutrum. Integer mauris
-                nisi, suscipit ut purus quis, laoreet malesuada orci. Proin at
-                suscipit mi. Etiam nulla arcu, aliquam sit amet ultricies eu,
-                porta nec mauris. Quisque feugiat tortor eu tincidunt tempor.
-                Ut feugiat nunc nec tincidunt ultricies. Vestibulum mattis
-                posuere magna vitae volutpat.</p>
-            </div>
-            <div class="card-footer text-muted text-left">
-              2 days ago
-            </div>
-          </div>
-
-          <!--Feed 3 -->
-          <div class="card mx-auto homepage text-left">
-            <div class="card-body">
-              <h5 class="card-title">Post 3</h5>
-              <p class="card-text"> Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Sed dapibus consectetur tortor, eget ullamcorper
-                augue molestie in. Mauris tempus tristique libero, non dignissim
-                mi tempus ut. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Phasellus in tellus
-                nunc. Nulla commodo aliquam rutrum. Fusce vestibulum dui eget
-                tortor semper hendrerit. Vestibulum molestie vestibulum mi, vitae
-                malesuada nulla tristique id. Phasellus ornare cursus erat at
-                egestas. Nam posuere eros ut felis euismod rutrum. Integer mauris
-                nisi, suscipit ut purus quis, laoreet malesuada orci. Proin at
-                suscipit mi. Etiam nulla arcu, aliquam sit amet ultricies eu,
-                porta nec mauris. Quisque feugiat tortor eu tincidunt tempor.
-                Ut feugiat nunc nec tincidunt ultricies. Vestibulum mattis
-                posuere magna vitae volutpat.</p>
-            </div>
-            <div class="card-footer text-muted text-left">
-              2 days ago
-            </div>
-          </div>
-
-          <!--Feed 4 -->
-          <div class="card mx-auto homepage text-left">
-            <div class="card-body">
-              <h5 class="card-title">Post 4</h5>
-              <p class="card-text"> Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Sed dapibus consectetur tortor, eget ullamcorper
-                augue molestie in. Mauris tempus tristique libero, non dignissim
-                mi tempus ut. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Phasellus in tellus
-                nunc. Nulla commodo aliquam rutrum. Fusce vestibulum dui eget
-                tortor semper hendrerit. Vestibulum molestie vestibulum mi, vitae
-                malesuada nulla tristique id. Phasellus ornare cursus erat at
-                egestas. Nam posuere eros ut felis euismod rutrum. Integer mauris
-                nisi, suscipit ut purus quis, laoreet malesuada orci. Proin at
-                suscipit mi. Etiam nulla arcu, aliquam sit amet ultricies eu,
-                porta nec mauris. Quisque feugiat tortor eu tincidunt tempor.
-                Ut feugiat nunc nec tincidunt ultricies. Vestibulum mattis
-                posuere magna vitae volutpat.</p>
-            </div>
-            <div class="card-footer text-muted text-left">
-              2 days ago
-            </div>
-          </div>
-        </div>
+          
 
         <!-- Back to top scroll button -->
         <button onclick="topFunction()" id="toTopBtn" title="Back to Top">Back to Top</button>
@@ -357,5 +267,10 @@
 
         <!-- Link to external js file -->
         <script src="js/script.js"></script>
+        <script src="js/feed.js"></script>
+
+        <script>
+          const mountedApp = app.mount('#app')
+        </script>
     </body>
 </html>
