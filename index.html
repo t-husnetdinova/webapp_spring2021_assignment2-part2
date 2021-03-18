@@ -90,7 +90,7 @@
                             <h2 class="h3 mb-3 font-weight-normal"> Welcome Back! </h2>
 
                             <input type="email" class="form-control" placeholder="Email" required> <br>
-                            <input type="password" class="form-control" placeholder="Password" required> <br>
+                            <input type="password-sign-in" class="form-control" placeholder="Password" required> <br>
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                             <label class="form-check-label" for="defaultCheck1">Remember Me</label> <br> <br>
                             <button class="btn btn-primary btn-block" type="submit">Log In</button>
@@ -121,7 +121,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-center">
-                        <form class="form-signin">
+                        <form class="form-signup" onsubmit="return validateForm()" novalidate>
                             <img src="img/happy-emoji-svgrepo-com.svg" width="100" height="100" class="d-inline-block align-top"
                                 alt="">
                             <h2 class="h3 mb-3 font-weight-normal"> Welcome! </h2>
@@ -132,8 +132,9 @@
                               <div class="col">
                                 <input type="text" class="form-control" placeholder="Last name" required> <br>
                               </div>
-                              <div class="col">
-                                <input type ="date" class="form-control" required> <br>
+                              <div class="col" id="date-div">
+                                <input type ="date" id="dob" class="form-control" required> <br>
+                                <div id="divDobError" class="invisible errorMessage"></div>
                               </div>
                             </div>
 
@@ -147,11 +148,13 @@
                             </div>
 
                             <div class="row">
-                              <div class="col">
-                                <input type="password" class="form-control" placeholder="Password" required> <br>
+                              <div class="col" id="password-div">
+                                <input type="password" id="password-sign-up" class="form-control" placeholder="Password" required> <br>
+                                <div id="divPasswordError" class="invisible errorMessage"></div>
                               </div>
-                              <div class="col">
-                                <input type="password" class="form-control" placeholder="Confirm password" required> <br>
+                              <div class="col" id="password-div">
+                                <input type="password" id="password-confirm" class="form-control" placeholder="Confirm password" required> <br>
+                                <div id="divPasswordError" class="invisible errorMessage"></div>
                               </div>
                             </div>
 
@@ -159,27 +162,63 @@
                             Security Questions <br>
                             <div class="row">
                               <div class="col">
-                                <fieldset class="borderless">
-                                  <input type="text" class="form-control" placeholder="Security Question 1" required>
-                                  <input type="text" class="form-control" placeholder="Answer" required>
+                                <fieldset class="borderless"></fieldset>
+                                  <div class="form-control" id="security1" required> 
+                                    <select onchange="updateSecurityQuestion1View()">
+                                      <option value="0">Security Question 1:</option>
+                                      <option value="1">What was your childhood nickname?</option>
+                                      <option value="2">What is your oldest cousin's first and last name?</option>
+                                      <option value="3">What was the last name of your third grade teacher?</option>
+                                      <option value="4">In what city or town was your first job?</option>
+                                      <option value="5">In what city or town did your mother and father meet?</option>
+                                    </select>
+                                  </div>
+                                  <div id="divSecurity1" class="form-control invisible"> 
+                                    <input type="text" class="form-control" placeholder="Answer" required>
+                                    <div class="divSecurityError1" class="invisible errorMessage"></div>
+                                  </div>
                                 </fieldset>
                               </div>
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <input type="text" class="form-control" placeholder="Security Question 2" required>
-                                  <input type="text" class="form-control" placeholder="Answer" required>
+                                  <div class="form-control" id="security2" required> 
+                                    <select onchange="updateSecurityQuestion2View()">
+                                      <option value="0">Security Question 2:</option>
+                                      <option value="1">What was your childhood nickname?</option>
+                                      <option value="2">What is your oldest cousin's first and last name?</option>
+                                      <option value="3">What was the last name of your third grade teacher?</option>
+                                      <option value="4">In what city or town was your first job?</option>
+                                      <option value="5">In what city or town did your mother and father meet?</option>
+                                    </select>
+                                  </div>
+                                  <div id="divSecurity2" class="form-control invisible"> 
+                                    <input type="text" class="form-control" placeholder="Answer" required>
+                                    <div class="divSecurityError2" class="invisible errorMessage"></div>
+                                  </div>
                                 </fieldset>
                               </div>
                               <div class="col">
                                 <fieldset class="borderless">
-                                  <input type="text" class="form-control" placeholder="Security Question 3" required>
-                                  <input type="text" class="form-control" placeholder="Answer" required>
+                                  <div class="form-control" id="security3" required> 
+                                    <select onchange="updateSecurityQuestion3View()">
+                                      <option value="0">Security Question 3:</option>
+                                      <option value="1">What was your childhood nickname?</option>
+                                      <option value="2">What is your oldest cousin's first and last name?</option>
+                                      <option value="3">What was the last name of your third grade teacher?</option>
+                                      <option value="4">In what city or town was your first job?</option>
+                                      <option value="5">In what city or town did your mother and father meet?</option>
+                                    </select>
+                                  </div>
+                                  <div id="divSecurity3" class="form-control invisible"> 
+                                    <input type="text" class="form-control" placeholder="Answer" required>
+                                    <div class="divSecurityError3" class="invisible errorMessage"></div>
+                                  </div>
                                 </fieldset>
                               </div>
                             </div>
 
                             <br>
-                            <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+                            <button class="btn btn-primary btn-block" type="button">Sign Up</button>
                             <button class="btn btn-secondary btn-block btn-sm" type="reset">Reset</button>
                         </form>
                     </div>
