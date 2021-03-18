@@ -24,7 +24,11 @@ const app = Vue.createApp({
       componentKey: 0
     }
   },
-  methods: {}
+  methods: {
+    posts() {
+      
+    }
+  }
 })
 
 function updateSecurityQuestion1View() {

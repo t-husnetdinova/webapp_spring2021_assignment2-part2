@@ -1,4 +1,3 @@
-
 app.component('feed', {
     data() {
         return {
@@ -8,7 +7,9 @@ app.component('feed', {
     },
     methods: {
         updatePosts: function() {
-            posts += 10;
+            this.posts += 10;
+            console.log(this.posts);
+            this.$forceUpdate();
         }
     },
     template: 

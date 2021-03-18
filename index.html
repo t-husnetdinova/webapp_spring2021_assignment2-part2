@@ -277,18 +277,18 @@
           </div>
 
           <!-- Feed -->
-
-
           <div id="app">
             <div class="homepageHeader mx-auto">
               Feed
             </div>
-            <feed ref="foo" :key="componentKey"></feed>
+            <feed ref="feed" :key="componentKey"></feed>
+            
+            <div class="mx-auto text-center">
+              <button class="btn btn-dark" id="moreBtn" title="More" @click="$refs.feed.updatePosts()"> Show More </button>
+            </div>    
           </div>
 
-          <div class="mx-auto text-center">
-            <button class="btn btn-dark" id="moreBtn" title="More"> Show More </button>
-          </div>                   
+                         
 
         <!-- Back to top scroll button -->
         
