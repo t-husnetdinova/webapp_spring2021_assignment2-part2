@@ -74,3 +74,33 @@ function updateSecurityQuestion3View() {
     divSecurity3.classList.add("invisible");
   }
 }
+
+function validateForm() {
+  var passwordSignUp = document.querySelector("#password-sign-up");
+  var passwordConfirm = document.querySelector("#password-confirm");
+  var divPasswordError = document.querySelector("#divPasswordError")
+  var formIsValid = true;
+
+
+  if (passwordSignUp.value == "") {
+    divPasswordError.classList.remove("invisible");
+    divPasswordError.innerHTML = "The Password cannot be empty.";
+    passwordSignUp.classList.add("hasError");
+    formIsValid = false;
+  }
+
+  else if (passwordConfirm.value == "") {
+    divPasswordError.classList.remove("invisible");
+    divPasswordError.innerHTML = "The Password cannot be empty.";
+    passwordConfim.classList.add("hasError");
+    formIsValid = false;
+  }
+
+  else if (passwordSignUp.value != passwordConfirm.value) {
+    divPasswordError.classList.remove("invisible");
+    divPasswordError.innerHTML = "The Password cannot be empty.";
+    passwordConfim.classList.add("hasError");
+    formIsValid = false;
+  }
+
+}
