@@ -1,3 +1,4 @@
+
 app.component('feed', {
     data() {
         return {

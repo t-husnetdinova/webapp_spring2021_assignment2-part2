@@ -78,10 +78,11 @@ function updateSecurityQuestion3View() {
 function validateForm() {
   var passwordSignUp = document.querySelector("#password-sign-up");
   var passwordConfirm = document.querySelector("#password-confirm");
-  var divPasswordError = document.querySelector("#divPasswordError")
+  var divPasswordError = document.querySelector("#divPasswordError");
+  var specialCharacterError = document.querySelector("#specialCharacterError");
   var formIsValid = true;
 
-
+  // Password Check 
   if (passwordSignUp.value == "") {
     divPasswordError.classList.remove("invisible");
     divPasswordError.innerHTML = "The Password cannot be empty.";
@@ -102,5 +103,21 @@ function validateForm() {
     passwordConfim.classList.add("hasError");
     formIsValid = false;
   }
+
+  // Special Character Check
+  var elements = document.getElementsByTagName("input");
+
+  var invalidChars = ['<', '>', '#', '-', '{', '}', '(', ')', '`', '"']; 
+  for (let i = 0; i < elements.length; i++) {
+      for (let j = 0; j < invalidChars.length; j++) {
+          if (elements[i].value.indexOf(invalidChars[j]) != -1) {
+              specialCharacterError.classList.remove("invisible");
+              specialCharacterError.innerHTML = "NO SPECIAL CHARACTERS!";
+              elements[i].classList.add("hasError");
+              formIsValid = false;
+          }
+      }
+  }
+
 
 }
