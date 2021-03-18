@@ -20,7 +20,7 @@
 <br>
 **Extra features:** We added an extra portion of dynamicity to the project by introducing Vue.js for visual infrastructure. We have a working "Show More" button at the bottom of the posts page that loads in additional posts. This is similar to the pagination done in Part 1, but has its own flavor and more closely matches the Reddit feel we are going for.<br>
 <br>
-**Nu HTML Checker status:** COMING SOON <br>
+**Nu HTML Checker status:** Nu HTML checker tests passed, with warnings about Vue :key, @submit, and v-if and v-for within the html. Actual html looks good and follows standard practices. <br>
 <br>
 **Check it out:** https://t-husnetdinova.github.io/webapp_spring2021_assignment2-part2/ <br>
 <br>
