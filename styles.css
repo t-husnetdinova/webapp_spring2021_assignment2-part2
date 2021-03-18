@@ -82,6 +82,10 @@ hr {
     font-size: 16px; /* Increase font size */
 }
 
+#moreBtn {
+  margin-top: 20px;
+}
+
 .custom-select {
   position: relative;
   border: none; /* Remove borders */

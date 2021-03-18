@@ -3,12 +3,18 @@ app.component('feed', {
     data() {
         return {
             posts: 10,
+            componentKey: 0,
+        }
+    },
+    methods: {
+        updatePosts: function() {
+            posts += 10;
         }
     },
     template: 
       /*html*/ 
       `<div class="feed">
-        <post v-for="n in posts" :key="n">  </post>
+        <post v-for="n in posts" :key="componentKey">  </post>
       </div>`
   })
 

@@ -128,7 +128,7 @@
                             <h2 class="h3 mb-3 font-weight-normal"> Welcome! </h2>
 
                             <div id="specialCharacterError" class="invisible errorMessage"> </div>
-                            
+
                             <div class="row">
                               <div class="col">
                                 <input type="text" class="form-control" placeholder="First name" required> <br>
@@ -285,11 +285,15 @@
             <div class="homepageHeader mx-auto">
               Feed
             </div>
-            <feed :key="componentKey"></feed>
+            <feed ref="foo" :key="componentKey"></feed>
           </div>
-          
+
+          <div class="mx-auto text-center">
+            <button class="btn btn-dark" id="moreBtn" title="More"> Show More </button>
+          </div>                   
 
         <!-- Back to top scroll button -->
+        
         <button onclick="topFunction()" id="toTopBtn" title="Back to Top">Back to Top</button>
 
         <!-- Bottom navbar? -->
