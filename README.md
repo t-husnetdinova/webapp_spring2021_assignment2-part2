@@ -16,11 +16,11 @@
 <br>
 **Technologies used:** HTML5, CSS3, Native Javascript, Vue.js for code, Visual Studio Code for development and testing, Google Chrome browser for testing, Windows 10 OS <br>
 <br>
-**Justification in design choices:**<br>
+**Justification in design choices:** We started by adding the validateForm() function following the example set in our Covid Form classwork; we check for passwords matching, special characters in all inputs, and to see if the password has the required security checks. As an additional check, we also added date of birth validation for the Sign Up form. We added dynamicity to the project by intriducing Vue.js for visual infrastructure and having more interactive Security Questions on Sign Up; the formatting can definitely use an additional pass, but the work to display textboxes when the dropdown quesiton is selected does pop up as it should. <br>
 <br>
 **Extra features:**  While we were at it with validation checks, we made sure to include a check for date of birth input; the date could not be today or a future date. <br>
 <br>
-**Nu HTML Checker status:**  <br>
+**Nu HTML Checker status:** COMING SOON <br>
 <br>
 **Check it out:** https://t-husnetdinova.github.io/webapp_spring2021_assignment2-part2/ <br>
 <br>
