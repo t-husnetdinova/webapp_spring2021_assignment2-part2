@@ -231,7 +231,7 @@
             </div>
         </div>
 
-        <div class="home-container">
+        <div class="home-container ">
           <!-- Trending -->
           <div class="homepageHeader mx-auto">
             Trending
@@ -281,7 +281,7 @@
             <div class="homepageHeader mx-auto">
               Feed
             </div>
-            <feed ref="feed" :key="componentKey"></feed>
+            <feed id="feed" ref="feed" :key="componentKey"> </feed>
 
             <div class="mx-auto text-center">
               <button class="btn btn-primary" id="moreBtn" title="More" @click="$refs.feed.updatePosts()"> Show More </button>
